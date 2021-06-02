@@ -263,7 +263,7 @@ export default class HomePage extends Component{
     // console.log(productsArray,"got the product array in app.js")
     return (
       <View >
-          <FlashMessage position="top"/>
+          <FlashMessage styl={{zIndex:1}} position="top"/>
           <Header/>
           
           <Toast activeOpacity={1000}  ref={(ref) => Toast.setRef(ref)} />
@@ -274,6 +274,12 @@ export default class HomePage extends Component{
       />
       </View>
     )
+  }
+}
+
+HomePage.navigationOptions = (navData) => {
+  return {
+    headerTitle:"YOur Products"
   }
 }
 
@@ -313,3 +319,4 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   }
 });
+
